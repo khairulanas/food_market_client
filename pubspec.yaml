@@ -32,6 +32,7 @@ dependencies:
   google_fonts:
   supercharged:
   flutter_spinkit:
+  get:
 
 
 dev_dependencies:
