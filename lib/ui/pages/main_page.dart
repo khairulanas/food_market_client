@@ -8,6 +8,26 @@ class MainPage extends StatefulWidget {
 class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: ,);
+    return Scaffold(
+      body: Stack(
+        children: [
+          Container(
+            color: Colors.white,
+          ),
+          SafeArea(
+            child: Container(
+              color: 'FAFAFC'.toColor(),
+            ),
+          ),
+          SafeArea(
+            child: Center(child: Text('body')),
+          ),
+          Align(
+            alignment: Alignment.bottomCenter,
+            child: CustomBottomNavBar(),
+          )
+        ],
+      ),
+    );
   }
 }
