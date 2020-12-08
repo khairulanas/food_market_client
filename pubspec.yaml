@@ -33,6 +33,7 @@ dependencies:
   supercharged:
   flutter_spinkit:
   get:
+  material_design_icons_flutter:
 
 
 dev_dependencies:
