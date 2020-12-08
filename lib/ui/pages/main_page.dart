@@ -30,7 +30,7 @@ class _MainPageState extends State<MainPage> {
                 });
               },
               children: [
-                Center(child: Text('Home')),
+                Center(child: FoodPage()),
                 Center(child: Text('order')),
                 Center(child: Text('profile')),
               ],
