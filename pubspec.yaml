@@ -34,6 +34,7 @@ dependencies:
   flutter_spinkit:
   get:
   material_design_icons_flutter:
+  equatable:
 
 
 dev_dependencies:
