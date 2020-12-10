@@ -35,6 +35,7 @@ dependencies:
   get:
   material_design_icons_flutter:
   equatable:
+  intl:
 
 
 dev_dependencies:
