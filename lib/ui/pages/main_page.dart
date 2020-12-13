@@ -31,7 +31,13 @@ class _MainPageState extends State<MainPage> {
               },
               children: [
                 Center(child: FoodPage()),
-                Center(child: Text('order')),
+                Center(
+                    child: IllustrationPage(
+                        title: 'ouch hungry',
+                        subtitle: 'jh hghyfg rtydytjuyg cvfytfgh ghhg ',
+                        picturePath: 'assets/love_burger.png',
+                        buttonTitle1: 'find food',
+                        buttonTap1: () {})),
                 Center(child: Text('profile')),
               ],
             ),

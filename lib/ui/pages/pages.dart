@@ -18,3 +18,4 @@ part 'sign_in_page.dart';
 part 'sign_up_page.dart';
 part 'food_detail_page.dart';
 part 'payment_page.dart';
+part 'illustration_page.dart';
