@@ -91,7 +91,7 @@ class _FoodPageState extends State<FoodPage> {
                   Builder(
                     builder: (_) {
                       List<Food> foods = (selectedIndex == 0)
-                          ? []
+                          ? mockFoods
                           : (selectedIndex == 1)
                               ? []
                               : [];
@@ -109,7 +109,6 @@ class _FoodPageState extends State<FoodPage> {
                       );
                     },
                   ),
-
                 ],
               ),
             ),
