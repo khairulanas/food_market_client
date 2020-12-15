@@ -86,7 +86,7 @@ class OrderListItem extends StatelessWidget {
   }
 
   String convertDateTime(DateTime date) {
-    List<String> monts = [
+    List<String> months = [
       'Jan',
       'Feb',
       'Mar',
@@ -100,7 +100,7 @@ class OrderListItem extends StatelessWidget {
       'Nov',
       'Des'
     ];
-    String month = monts[date.month - 1];
+    String month = months[date.month - 1];
     return month + ' ${date.day}, ${date.hour}:${date.minute}';
   }
 }
