@@ -101,7 +101,7 @@ class _OrderHistoryPageState extends State<OrderHistoryPage> {
           );
         }
       } else {
-        Center(child: loadingIndicator);
+        return Center(child: loadingIndicator);
       }
     });
   }
