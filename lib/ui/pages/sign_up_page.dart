@@ -6,13 +6,13 @@ class SignUpPage extends StatefulWidget {
 }
 
 class _SignUpPageState extends State<SignUpPage> {
+  TextEditingController emailController = TextEditingController();
+  TextEditingController passwordController = TextEditingController();
+  TextEditingController nameController = TextEditingController();
   @override
   Widget build(BuildContext context) {
-    TextEditingController emailController = TextEditingController();
-    TextEditingController passwordController = TextEditingController();
-    TextEditingController nameController = TextEditingController();
     return GeneralPage(
-      onBackButtonPressed: ()=>Get.back(),
+      onBackButtonPressed: () => Get.back(),
       title: 'Sign Up',
       subtitle: 'Register and Eat',
       child: Column(

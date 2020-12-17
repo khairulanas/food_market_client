@@ -10,6 +10,7 @@ class _ProfilePageState extends State<ProfilePage> {
 
   @override
   Widget build(BuildContext context) {
+    User userState = (context.watch<UserCubit>().state as UserLoaded).user;
     return ListView(
       children: [
         Column(
@@ -36,17 +37,17 @@ class _ProfilePageState extends State<ProfilePage> {
                         decoration: BoxDecoration(
                             shape: BoxShape.circle,
                             image: DecorationImage(
-                                image: NetworkImage(mockUser.picturePath),
+                                image: NetworkImage(userState.picturePath),
                                 fit: BoxFit.cover)),
                       ),
                     ),
                     Text(
-                      mockUser.name,
+                      userState.name,
                       style: GoogleFonts.poppins(
                           fontSize: 18, fontWeight: FontWeight.w500),
                     ),
                     Text(
-                      mockUser.email,
+                      userState.email,
                       style:
                           greyFontStyle.copyWith(fontWeight: FontWeight.w300),
                     )

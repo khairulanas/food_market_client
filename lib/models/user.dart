@@ -26,11 +26,11 @@ class User extends Equatable {
 
 User mockUser = User(
     id: 1,
-    name: 'Jennie Kim',
+    name: 'Megumi Kato',
     address: 'Jalan Jenderal Sudirman',
     city: 'Bandung',
     houseNumber: '1234',
     phoneNumber: '08123456789',
-    email: 'jennie.kim@blackpink.com',
+    email: 'megumi.kato@saekano.com',
     picturePath:
-        'https://i.pinimg.com/474x/8a/f4/7e/8af47e18b14b741f6be2ae499d23fcbe.jpg');
+        'https://static.wikia.nocookie.net/saekano/images/b/b3/1b4779de01940bec59446ff549cb6a74.jpg');

@@ -11,6 +11,8 @@ class _FoodPageState extends State<FoodPage> {
   Widget build(BuildContext context) {
     double listItemWidth =
         MediaQuery.of(context).size.width - (2 * defaultMargin);
+
+    User userState = (context.watch<UserCubit>().state as UserLoaded).user;
     return ListView(
       children: [
         Column(
@@ -45,8 +47,7 @@ class _FoodPageState extends State<FoodPage> {
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(8),
                         image: DecorationImage(
-                            image: NetworkImage(
-                                'https://static.wikia.nocookie.net/saekano/images/b/b3/1b4779de01940bec59446ff549cb6a74.jpg'),
+                            image: NetworkImage(userState.picturePath),
                             fit: BoxFit.cover)),
                   ),
                 ],
@@ -64,7 +65,17 @@ class _FoodPageState extends State<FoodPage> {
                                 left:
                                     (e == mockFoods.first) ? defaultMargin : 0,
                                 right: defaultMargin),
-                            child: FoodCard(food: e),
+                            child: GestureDetector(
+                                onTap: () {
+                                  Get.to(FoodDetailPage(
+                                    transaction:
+                                        Transaction(food: e, user: userState),
+                                    onBackButtonPressed: () {
+                                      Get.back();
+                                    },
+                                  ));
+                                },
+                                child: FoodCard(food: e)),
                           ))
                       .toList(),
                 )
